@@ -15,8 +15,8 @@
 </head>
 
 <body>
-    <div class="app">
-<!--         <h1>PhoneGap</h1>
+  <!--  <div class="app"> 
+      <h1>PhoneGap</h1>
         <div id="deviceready" class="blink">
             <p class="event listening">Connecting to Device</p>
             <p class="event received">Device is Ready</p>
@@ -36,17 +36,37 @@
     </div>
     <div data-role="page" id="page2">
         <div data-role="header" data-position="fixed">
-            <h1 id="title">Photo Box</h1>
+            <h1>PhotoBox</h1>
         </div>
-        <div data-role="content">
-             Second Page
-             <a href="#page1">click</a>
-        </div>  
+        <div data-role="content">   
+             <a href="#page1" class="button primary">click</a>
+        </div><!-- /content -->
+
         <div data-role="footer" data-position="fixed">
-             Icons
-        </div>  
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#page1" data-icon="grid">Summary</a></li>
+                <li><a href="#page2" data-icon="star" class="ui-btn-active">Favs</a></li>
+                <li><a href="#page3" data-icon="gear">Setup</a></li>
+            </ul>
+        </div><!-- /navbar -->
+        </div><!-- /footer -->
     </div>
+    <div id="page3" data-role="page" >
+
+    <div data-role="header" data-position="fixed">
+        <h1 id="title">Photo Box</h1>
     </div>
+
+    <div data-role="content">
+         <ul id="photographers" data-role="listview" data-filter="true">
+             <li><h2>vfkjkf</h2><span class="ui-li-count ui-body-inherit">x<br/>y</span>
+             <h3>good</h3></li>
+         </ul>
+    </div>      
+
+</div>
+    <!-- </div> -->
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
