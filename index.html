@@ -9,6 +9,8 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
      --><link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery-mobile.css" />
+    <link href="css/materialize.min.css" rel="stylesheet" type="text/css">
+    <link href="css/material.blue-light_blue.min.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-mobile.js"></script>
     <title>Hello World</title>
@@ -39,7 +41,26 @@
             <h1>PhotoBox</h1>
         </div>
         <div data-role="content">   
-             <a href="#page1" class="button primary">click</a>
+             <div class="row"><h3>New Collection for you!!</h3></div>
+             <div class="row">
+            <!-- left column -->
+            <div class="col s6">
+              <a href="project.html"><img alt="" src="img/14.jpg"></a> 
+              <a href="project.html"><img alt="" src="img/8.jpg"></a> 
+              <a href="project.html"><img alt="" src="img/3.jpg"></a>
+              <a href="project.html"><img alt="" src="img/5.jpg"></a> 
+              <a href="project.html"><img alt="" src="img/7.jpg"></a>
+            </div>
+            
+            <!-- right column -->
+            <div class="col s6">
+              <a href="project.html"><img alt="" src="img/2.jpg"></a> 
+              <a href="project.html"><img alt="" src="img/10.jpg"></a> 
+              <a href="project.html"><img alt="" src="img/4.jpg"></a> 
+              <a href="project.html"><img alt="" src="img/11.jpg"></a> 
+              <a href="project.html"><img alt="" src="img/2.jpg"></a>
+            </div>
+          </div>
         </div><!-- /content -->
 
         <div data-role="footer" data-position="fixed">
@@ -48,6 +69,7 @@
                 <li><a href="#page1" data-icon="grid">Summary</a></li>
                 <li><a href="#page2" data-icon="star" class="ui-btn-active">Favs</a></li>
                 <li><a href="#page3" data-icon="gear">Setup</a></li>
+                <li><a href="#page4" data-icon="heart">Timeline</a></li>
             </ul>
         </div><!-- /navbar -->
         </div><!-- /footer -->
@@ -59,13 +81,46 @@
     </div>
 
     <div data-role="content">
-         <ul id="photographers" data-role="listview" data-filter="true">
-             <li><h2>vfkjkf</h2><span class="ui-li-count ui-body-inherit">x<br/>y</span>
-             <h3>good</h3></li>
-         </ul>
+         <p class="thumb-column">
+                <img src="img/4.jpg" alt="img">
+                <strong>vfdffg fdx</strong>
+                <em><br>fgvcb</em>
+         </p>
     </div>      
 
-</div>
+    </div>
+    <div id="page4" data-role="page" >
+
+    <div data-role="header" data-position="fixed">
+        <h1 id="title">Photo Box</h1>
+    </div>
+
+    <div data-role="content">
+    <div class="card fullscreen-card mdl-shadow--1dp bg-white">
+            <div class="card-menu">
+              <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-checked is-upgraded" for="icon-toggle-1" data-upgraded=",MaterialIconToggle,MaterialRipple">
+                <input type="checkbox" id="icon-toggle-1" class="mdl-icon-toggle__input" checked="">
+                <i class="mdl-icon-toggle__label material-icons">favorite</i>
+              <span class="mdl-icon-toggle__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+            </div>
+            <a href="article2.html">
+              <div class="">
+                <img class="scale" src="img/4.jpg" alt="">
+                <div class="overlay-opacity"></div>
+              </div>
+              <h3 class="white-color">Picture</h3>
+            </a>
+            <div class="card-header">
+              <img src="img/user.jpg" alt="">
+              <div class="card-autor">
+                <p class="white">Mark Rees</p>
+                <span class="white">2 Days ago</span>
+              </div>
+            </div>            
+          </div>
+    </div>      
+
+    </div>
     <!-- </div> -->
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>

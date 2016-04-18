@@ -1,21 +1,4 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
@@ -96,7 +79,10 @@ h1 {
     background-color:#4B946A;
     display:none;
 }
-
+.col img{
+    margin-bottom: 4px;
+    margin-left: 4px;
+}
 @keyframes fade {
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
@@ -112,4 +98,206 @@ h1 {
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
+}
+@media (min-width:760px){
+    .thumb-column{
+        width:50%;
+        float:left;
+    }
+}
+
+.thumb-column{
+    line-height:24px;
+    display:block;
+    padding-bottom:0px;
+}
+
+.thumb-column a{
+    display:block;
+    text-align:right;
+}
+
+.thumb-column img{
+    margin-top:5px;
+    -moz-transform: scale(0.95, 0.95);
+    -webkit-transform: scale(0.95, 0.95);
+    -o-transform: scale(0.95, 0.95);
+    -ms-transform: scale(0.95, 0.95);
+    transform: scale(0.95, 0.95);
+    width:100px;
+    height:100px;
+    border-radius:100px;
+    float:left;
+    margin-right:20px;
+    -webkit-transition: all 150ms ease;
+    -moz-transition: all 150ms ease;
+    -ms-transition: all 150ms ease;
+    -o-transition: all 150ms ease;
+    transition: all 150ms ease;
+}
+
+.thumb-column img:hover{
+    -moz-transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+    -o-transform: scale(1,1);
+    -ms-transform: scale(1,1);
+    transform: scale(1,1);
+    -webkit-transition: all 150ms ease;
+    -moz-transition: all 150ms ease;
+    -ms-transition: all 150ms ease;
+    -o-transition: all 150ms ease;
+    transition: all 150ms ease;
+}
+
+.thumb-column strong{
+    color:#1a1a1a;
+    display:inline-block;
+    padding-bottom:5px;
+    font-size:15px;
+    padding-top:10px;
+    font-weight:700;
+}
+
+.thumb-column em{
+    font-style:normal;
+    line-height:28px;
+}
+
+
+@media (min-width:600px){
+    .thumb-column img{
+        width:140px;
+        height:140px;
+        border-radius:150px;    
+    }
+    
+    .thumb-column em{
+        line-height:28px;   
+    }
+    
+    .thumb-column strong{
+        padding-top:10px;   
+    }
+}
+.card {
+    margin: 0 16px 16px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+.fullscreen-card {
+    margin: 0;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 0;
+}
+.fullscreen-card h3 {
+    position: absolute;
+    top: 19px;
+    left: 16px;
+    font-size: 20px;
+    margin: 0;
+}
+.fullscreen .card-header {
+    position: relative;
+}
+.scale {
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+}
+.fullscreen-card:hover .scale {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
+.fullscreen-card .card-header {
+    position: absolute;
+    bottom: 0;
+}
+.card-menu {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+.card-close i {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    font-size: 16px;
+}
+.card-header {
+    position: relative;
+    padding: 16px 16px 16px 80px;
+}
+.card-info {
+    padding: 16px 16px 0;
+    text-align: right;
+}
+.card-info p,
+.card-info i {
+    font-size: 13px;
+}
+.card-header img {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.card-autor p {
+    margin-bottom: 0;
+}
+.card-content {
+    padding: 16px;
+}
+.card-content span {
+    margin-bottom: 16px;
+    display: block;
+}
+.card-content .mdl-button {
+    margin-top: 24px;
+}
+.card-content-overlay {
+    width: 100%;
+    padding: 16px;
+    bottom: 0;
+    position: absolute;
+    color: #ffffff;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+.card-content-overlay h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+.card-content-overlay p {
+    font-weight: 100;
+}
+.card-content-overlay.gradient {
+    z-index: 100;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+}
+.card-autor p i {
+    font-size: 14px;
+}
+.card-footer {
+    padding: 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.mdl-shadow--1dp {
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.bg-white {
+    background-color: #ffffff;
+}
+.white-color{
+    color: white;
 }
